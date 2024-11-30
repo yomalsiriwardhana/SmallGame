@@ -1,0 +1,92 @@
+/* src/pages/register.css */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+}
+
+.register form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.register h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formInput {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formInput input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.formInput input:focus {
+  border-color: #4c6ef5;
+  outline: none;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4c6ef5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e5ac7;
+}
+
+.formLink {
+  margin-top: 15px;
+}
+
+.formLink span {
+  color: #888;
+}
+
+.formLink a {
+  color: #4c6ef5;
+  text-decoration: none;
+}
+
+.formLink a:hover {
+  text-decoration: underline;
+}
+
+.imgr {
+  background-image: url('../images/bgimage1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 8px;
+}

@@ -1,0 +1,13 @@
+.formInput input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formInput span {
+    color: red;
+    font-size: 12px;
+  }
+  

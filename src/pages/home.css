@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  #homeForm {
+    text-align: center;
+  }
+  
+  #login-btnn, #register-btn, #instructions-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .imgii {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-top: 20px;
+    background-position: center;
+  }
+  
