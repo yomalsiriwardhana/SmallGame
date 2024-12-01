@@ -1,62 +1,47 @@
-import React, { useState } from 'react';
-import { db, auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { setDoc, doc } from 'firebase/firestore';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './levels.css';
+import { auth } from '../firebase'; // Importing auth from Firebase
 
-const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [username, setUsername] = useState(''); // New state for username
-  const [error, setError] = useState('');
+const Levels = ({ user, username }) => {
+  const navigate = useNavigate();
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
-
-    try {
-      // Create a new user with Firebase Authentication
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-
-      // Store user data in Firestore, including the username
-      await setDoc(doc(db, "users", user.uid), {
-        email: user.email,
-        username: username, // Save username to Firestore
-        createdAt: new Date()
-      });
-
-      console.log("User registered and data saved to Firestore");
-    } catch (error) {
-      console.error("Error registering user:", error);
-      setError("Error registering user. Please try again.");
+  useEffect(() => {
+    if (!user) {
+      window.alert('Not Logged In');
+      navigate('/login');
     }
+  }, [navigate, user]);
+
+  const handleLogout = () => {
+    // Sign out the user using Firebase authentication
+    auth.signOut()
+      .then(() => {
+        navigate('/'); // Redirect to Home page or correct path after logout
+      })
+      .catch((error) => {
+        console.error("Error signing out: ", error);
+      });
   };
 
   return (
-    <div>
-      <form onSubmit={handleRegister}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
-        />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-        <button type="submit">Register</button>
+    <div className="levels">
+      <div className="user-info">
+        <span id="username">{username}</span> {/* Display the username */}
+      </div>
+
+      <form id="levelForm">
+        <h2 id="d">BABY ELEPHANT</h2>
+        <h2 id="e">Forest Math Mission</h2>
+        <Link to="/game">
+          <button id="Easy-btn">Game Start</button>
+        </Link>
+        <button id="Medium-btn" onClick={handleLogout}>Log Out</button>
+        <div className="imgs" />
       </form>
-      {error && <p>{error}</p>}
     </div>
   );
-};
+}
 
-export default Register;
+export default Levels;

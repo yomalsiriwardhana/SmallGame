@@ -1,50 +1,40 @@
-import React, { useState } from 'react';
-import { auth, db } from '../firebase';
+import React, { useState } from 'react'; 
+import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
+import './login.css'; // Assuming you're using the same CSS structure
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // For navigating to Levels page after login
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      // Sign in user with Firebase Authentication
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("User logged in successfully");
 
-      // Retrieve the user's username from Firestore
-      const userDocRef = doc(db, "users", user.uid);
-      const userDoc = await getDoc(userDocRef);
+      // Get the current user and update state in App.js
+      const user = auth.currentUser;
+      setUser(user); // Set the logged-in user in the parent component (App.js)
 
-      if (userDoc.exists()) {
-        // Set the username in the application state
-        const userData = userDoc.data();
-        const loggedInUser = {
-          uid: user.uid,
-          username: userData.username,
-        };
-        setUser(loggedInUser); // Update user state with username
-        
-        // Navigate to Levels page after successful login
-        navigate('/levels');
-      } else {
-        console.log("No such document!");
-      }
+      // Redirect to Levels page after successful login
+      navigate('/levels'); // Ensure the route to Levels is '/levels'
     } catch (error) {
-      console.error("Error logging in:", error);
-      setError("Error logging in. Please try again.");
+      console.error("Error logging in user:", error);
+      setError("Invalid email or password. Please try again.");
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
+    <div className="login">
+      <div className="imgl"></div>
+      <form className="login-form" onSubmit={handleLogin}>
+        <h2>Login</h2>
         <input
           type="email"
           value={email}
@@ -58,8 +48,8 @@ const Login = ({ setUser }) => {
           placeholder="Password"
         />
         <button type="submit">Login</button>
+        {error && <p className="error">{error}</p>}
       </form>
-      {error && <p>{error}</p>}
     </div>
   );
 };

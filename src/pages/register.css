@@ -1,81 +1,100 @@
-/* src/pages/register.css */
+/* Overall container for the register page */
 .register {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #f0f4f8;
-  font-family: Arial, sans-serif;
+  width: 100%;
+  background-image: url("C:/Users/DOWNLOAD/OneDrive/Desktop/Sgame/final/my-firebase-app/src/images/bgimage1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
-.register form {
-  background-color: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
+.imgr {
+  background-image: url("C:/Users/DOWNLOAD/OneDrive/Desktop/Sgame/final/my-firebase-app/src/images/image2.png");
+  height: 90%;
+  width: 77%;
+  margin-left: -250px;
+  margin-top: -30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.register-form {
+  background-color: #d3d3d3;
   max-width: 400px;
-  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 60%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50;
+  right: 500px;
 }
 
 .register h2 {
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #232836;
+  text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.formInput {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.formInput input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.formInput input:focus {
-  border-color: #4c6ef5;
-  outline: none;
-}
-
-.eyeIcon {
-  position: absolute;
-  right: 10px;
-  top: 35%;
-  cursor: pointer;
-}
-
-button {
+/* Input fields styles */
+.register input {
   width: 100%;
   padding: 12px;
-  background-color: #4c6ef5;
-  color: white;
+  margin: 10px 0;
+  border-radius: 25px;
+  border: 1px solid #ccc;
   font-size: 16px;
+  background-color: #fff;
+}
+
+/* Focused input field styles */
+.register input:focus {
+  outline: none;
+  border-color: #224f11;
+}
+
+/* Submit button styles */
+.register button {
+  height: 50px;
+  width: 40%;
+  background-color: #224f11;
+  color: white;
+  padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+  transition: 0.5;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 50px;
+  left: 120px;
 }
 
-button:hover {
-  background-color: #3e5ac7;
+.register button:hover {
+  background-color: #058817;
 }
 
+/* Link to login page for already registered users */
 .formLink {
-  margin-top: 15px;
-}
-
-.formLink span {
-  color: #888;
+  font-size: 12px;
+  color: #232836;
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
 }
 
 .formLink a {
-  color: #4c6ef5;
+  color: #224f11;
   text-decoration: none;
 }
 
@@ -83,10 +102,10 @@ button:hover {
   text-decoration: underline;
 }
 
-.imgr {
-  background-image: url('../images/bgimage1.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  border-radius: 8px;
+/* Error message styling */
+.register p {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
 }
