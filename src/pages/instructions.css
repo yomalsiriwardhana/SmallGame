@@ -1,0 +1,108 @@
+.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/src/images/bgimage1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.imgi{
+    background-image: url("/src/images/Icon.png");
+    height: 50%; /* Matches level.css img class height */
+    width: 66%; /* Matches level.css img class width */
+    margin-left: -250px; /* Adjust this value if needed */
+    margin-top: 250px; /* Adjust this value if needed */
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+#instructForm {
+    background-color: #D7E5FF;
+    max-width: 65%;
+    padding: 20px;
+    width: 400%;
+    height: 90%; /* Adjusted height to make the form bigger */
+    border-radius: 20px;
+    position: absolute;
+    right: 40px;
+}
+
+#ia {
+    font-size: 40px;
+    font-weight: bold;
+    color: #232836;
+    text-align: center;
+    padding: 1px;
+}
+
+#ib {
+    font-size: 30px;
+    font-weight: bold;
+    color: #232836;
+    text-align: center;
+    padding: 1px;
+}
+
+#ic {
+    font-size: 25px;
+    font-weight: bold;
+    color: #232836;
+    text-align: center;
+    padding: 1px;
+}
+
+.iform-title{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    padding: 5px;
+}
+
+.iform-text{
+    font-size: 14px;
+    padding: 6px;
+}
+
+.iform-footer{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    padding: 40px;
+}
+
+#play-btn {
+    height: 50px;
+    width: 20%;
+    background-color: #224f11;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+    transition: 0.5;
+    cursor: pointer;
+    position: absolute;
+    bottom: 90px;
+    right: 40%;
+}
+
+#get-started-btn:hover {
+    background-color: #058817;  
+}
+
+.footer{
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

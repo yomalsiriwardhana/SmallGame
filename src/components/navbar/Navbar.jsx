@@ -11,6 +11,7 @@ function Navbar({ username }) {
         <Link to="/instructions" className="nav-link">Instructions</Link>
         <Link to="/Levels" className="nav-link">Home</Link>
         <h1 className="logout">{username}</h1> {/* Display username here */}
+        
       </div>
     </div>
   );
