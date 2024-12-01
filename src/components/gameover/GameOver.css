@@ -1,0 +1,53 @@
+.game-over{
+    text-align: center;
+    padding: 60px; 
+    background-color: #d3d3d3;
+    
+    border-radius: 30px; 
+    margin: 50px auto;
+    max-width: 800px; 
+  }
+  
+  #game-overForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    color:#224f11;
+    font-size: 48px; 
+  }
+  
+  p {
+    margin-bottom: 40px; 
+    font-size: 32px; 
+  }
+  
+  .try-again-btn {
+    background-color:  #224f11;
+    color: #f2f3f6;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 25px; 
+    width: 50%; 
+    margin-bottom: 30px;
+  }
+  
+  .try-again-btn:hover {
+    background-color: #058817;
+    
+  }
+  
+  .back-to-home {
+    text-decoration: none;
+    color: #027bae;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .back-to-home:hover {
+    text-decoration: underline;
+  }

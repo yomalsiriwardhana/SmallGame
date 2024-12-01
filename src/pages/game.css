@@ -1,0 +1,152 @@
+/* Background setup for the whole page */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('/src/images/bgimage2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Image for question */
+#question-image {
+  text-align: center;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #11002C;
+}
+
+/* Styling for the changing background images */
+.img2 {
+  background-image: url("/src/images/imgchange.png");
+  margin-left: 450px;
+  background-size: cover;
+  position: absolute;
+  left: 40%;
+  width: 50%;
+  height: 50%;
+  max-width: 340px;
+  bottom: 10%;
+}
+
+.img1 {
+  background-image: url("/src/images/image1.png");
+  margin-left: -490px;
+  background-size: cover;
+  position: absolute;
+  left: 40%;
+  width: 50%;
+  height: 50%;
+  max-width: 340px;
+  bottom: 10%;
+}
+
+/* Mute button style */
+.mute-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Styling for the game note */
+#note {
+  margin-top: 15px;
+  font-size: 35px;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Timer and score placement */
+#timer, #score, #level {
+  margin-left: 18%;
+  font-size: 25px;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+/* Styling for the try again button */
+.try-again-btn {
+  background-color: #11002C;
+  color: #f2f3f6;
+  transition: 0.5;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 30px;
+  font-size: 20px;
+  position: relative;
+  bottom: 5%;
+  border: 2px solid #11002C;
+}
+
+.try-again-btn:hover {
+  background-color: #0192CE;
+}
+
+/* Styling for answer buttons */
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -20px;
+}
+
+.answer-btn {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answer-btn:hover {
+  background-color: #058817;
+  border-color: #058817;
+}
+
+.answer-btn:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.answer-btn:focus {
+  outline: none;
+}
+
+/* Styling for username display in the top-right corner */
+.user-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #064413;
+  background-color: rgba(255, 255, 255, 0.7); /* Slight background for readability */
+  padding: 10px;
+  border-radius: 8px;
+}

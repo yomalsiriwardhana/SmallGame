@@ -9,7 +9,7 @@ const Levels = ({ user, username }) => {
 
   useEffect(() => {
     if (!user) {
-      window.alert('Not Logged In');
+      // Redirect to login if the user is not logged in
       navigate('/login');
     }
   }, [navigate, user]);
@@ -18,7 +18,7 @@ const Levels = ({ user, username }) => {
     // Sign out the user using Firebase authentication
     auth.signOut()
       .then(() => {
-        navigate('/'); // Redirect to Home page or correct path after logout
+        navigate('/'); // Redirect to Home page after logout
       })
       .catch((error) => {
         console.error("Error signing out: ", error);

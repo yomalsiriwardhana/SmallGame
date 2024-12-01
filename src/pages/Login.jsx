@@ -3,6 +3,7 @@ import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import './login.css'; // Assuming you're using the same CSS structure
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState('');
@@ -32,7 +33,6 @@ const Login = ({ setUser }) => {
 
   return (
     <div className="login">
-      <div className="imgl"></div>
       <form className="login-form" onSubmit={handleLogin}>
         <h2>Login</h2>
         <input
@@ -49,6 +49,14 @@ const Login = ({ setUser }) => {
         />
         <button type="submit">Login</button>
         {error && <p className="error">{error}</p>}
+
+        {/* Register link */}
+        <p className="register-link">
+          Don't have an account?{' '}
+          <Link to="/register" className="register-text">Register here</Link>
+        </p>
+
+        <div className="imgl"></div>
       </form>
     </div>
   );

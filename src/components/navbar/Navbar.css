@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px;
+    padding: 10px;
+    background-color:#d3d3d3;
+    
+    border-radius: 8px;
+    margin-top: 10px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #224f11;
+    margin: 0 0.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color:#224f11;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 18px;
+  }
+
+  .nav-link:hover {
+    background-color:#058817;
+  }
+
+  .logout {
+    text-decoration: none;
+    color: #fe0000;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem 1rem; /* Added more horizontal padding for a box-like appearance */
+    margin: 0 0.5rem;
+    font-size: 18px;
+    border-radius: 0.5rem;
+    border: 2px solid #fe0000; /* Adds a border around the text */
+    background-color: #fff; /* Adds a background color */
+    display: inline-block; /* Ensures the box wraps around the text */
+}
+
+
+  
+
+
+  
