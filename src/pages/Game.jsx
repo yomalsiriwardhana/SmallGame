@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import GameOver from '../components/gameover/GameOver';
 import audioFile from '../assets/audioFile.mp3';
-import { getFirestore, collection, addDoc, updateDoc, getDocs, doc } from 'firebase/firestore';
+
+import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore';
 
 const TomatoGame = ({ user, username }) => {
   const [quest, setQuest] = useState('');
@@ -114,21 +115,21 @@ const TomatoGame = ({ user, username }) => {
   const saveScoreToDatabase = async (finalScore) => {
     try {
       const db = getFirestore();
-      const scoresCollection = collection(db, 'scores');
-      const userEmail = getCookie('email');
-      const querySnapshot = await getDocs(scoresCollection);
-      const userDoc = querySnapshot.docs.find(doc => doc.data().userEmail === userEmail);
-      if (userDoc) {
-        await updateDoc(doc(scoresCollection, userDoc.id), { score: finalScore });
-      } else {
-        await addDoc(scoresCollection, {
-          userEmail,
-          score: finalScore,
-          timestamp: new Date(),
-        });
-      }
+      const gameScoresCollection = collection(db, 'gameScores');
+      
+      const startTime = Timestamp.fromDate(new Date()); // Current time when the game started
+      const endTime = Timestamp.fromDate(new Date()); // Current time when the game ended
+      
+      // Add document to Firestore collection
+      await addDoc(gameScoresCollection, {
+        username: username,
+        score: finalScore,
+        startTime: startTime,
+        endTime: endTime,
+      });
+      console.log("Game data saved to Firestore");
     } catch (error) {
-      console.error('Error saving/updating score to database: ', error);
+      console.error("Error saving game data: ", error);
     }
   };
 
