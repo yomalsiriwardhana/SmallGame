@@ -74,16 +74,41 @@
   margin-right: auto;
 }
 
-/* Timer and score placement */
-#timer, #score, #level {
-  margin-left: 18%;
+
+
+/* Style for the game info bar (score, level, time) at the top */
+#timer{
+  margin-left:18%;
   font-size: 25px;
   position: absolute;
-  top: 125px;
+  top: 110px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
 }
+
+
+#score{
+  margin-left: -18%;
+  font-size: 25px;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+#level {
+  font-size: 25px;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+
+
 
 /* Styling for the try again button */
 .try-again-btn {

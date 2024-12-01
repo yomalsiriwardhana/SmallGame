@@ -158,7 +158,7 @@ const TomatoGame = ({ user, username }) => {
 
   return (
     <div>
-      <Navbar />
+       <Navbar username={username} /> {/* Pass the username to Navbar */}
       <div className="bg">
         {isGameOver ? (
           <GameOver finalScore={score} handleTryAgain={handleTryAgain} />
@@ -186,6 +186,8 @@ const TomatoGame = ({ user, username }) => {
             <button className="mute-btn" onClick={handleMuteToggle}>
               {isMuted ? ' 🔇' : ' 🔊'}
             </button>
+            
+            {/* Score, Level, Timer on a single line */}
             <div>
               <p id="timer">Timer : {seconds} s</p>
               <p id="score">Score : {score}</p>
@@ -196,6 +198,9 @@ const TomatoGame = ({ user, username }) => {
       </div>
     </div>
   );
+  
+  
+  
 };
 
 export default TomatoGame;
