@@ -55,7 +55,7 @@
 }
 
 #Easy-btn,
-#Medium-btn {
+#Medium-btn, #Profile-btn {
     height: 50px;
     width: 40%;
     background-color: #224f11;
@@ -74,14 +74,22 @@
 }
 
 #Easy-btn {
-    bottom: 150px;
+    bottom: 190px;
 }
 
 #Medium-btn {
     bottom: 50px;
 }
 
+#Profile-btn {
+    bottom: 120px;
+}
+
 #Easy-btn:hover {
+    background-color: #058817;
+}
+
+#Profile-btn:hover  {
     background-color: #058817;
 }
 
