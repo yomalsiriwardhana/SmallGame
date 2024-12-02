@@ -89,7 +89,7 @@
     transition: 0.5;
     cursor: pointer;
     position: absolute;
-    bottom: 90px;
+    bottom: 40px;
     right: 40%;
 }
 
@@ -103,6 +103,6 @@
     padding: 10px;
     text-align: center;
     position: absolute;
-    bottom: 5px;
+    bottom: 40px;
     right: 10px;
 }

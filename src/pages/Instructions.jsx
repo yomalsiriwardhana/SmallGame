@@ -19,13 +19,10 @@ const Instructions = () => {
           <p className="iform-text">
             <ul>
               <li>
-                Create an account: 
+              Create an Account: To get started, you must create an account using your email and password.
               </li>
               <li>
-                Login: 
-              </li>
-              <li>
-                
+                Login: After creating your account, log in with your registered email and password.
               </li>
             </ul>
           </p>

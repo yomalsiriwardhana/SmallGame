@@ -13,12 +13,12 @@
 }
 
 .imgr {
-  background-image: url("C:/Users/DOWNLOAD/OneDrive/Desktop/Sgame/final/my-firebase-app/src/images/image2.png");
-  height: 90%;
-  width: 77%;
-  margin-left: -300px;
-  margin-top: -60px;
-  background-size: contain;
+  background-image: url("/src/images/image2.png");
+  height: 90%; 
+  width: 77%; 
+  margin-left: -250px; 
+  margin-top: -20px; 
+  background-size: contain; 
   background-repeat: no-repeat;
 }
 
@@ -44,7 +44,7 @@
 
 /* Input fields styles */
 .register input {
-  width: 90%;
+  width: 98%;
   padding: 12px;
   margin: 10px 0;
   border-radius: 25px;
@@ -74,7 +74,7 @@
   transition: 0.5;
   cursor: pointer;
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   left: 120px;
 }
 
@@ -88,7 +88,7 @@
   color: #232836;
   text-align: center;
   position: absolute;
-  bottom: 10px;
+  bottom: -10px;
   left: 0;
   width: 100%;
 }
@@ -109,3 +109,59 @@
   font-size: 14px;
   margin-top: 10px;
 }
+
+
+
+
+
+
+
+
+/* Style for alert messages */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: auto;
+  max-width: 90%;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  transition: all 0.3s ease-in-out; /* Smooth transition for alert visibility */
+}
+
+.alert.success {
+  background-color: #4CAF50; /* Green for success */
+}
+
+.alert.error {
+  background-color: #f44336; /* Red for error */
+}
+
+/* Ensure the text doesn't overlap with the button */
+.alert p {
+  margin: 0;
+  flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+/* Style for the OK button inside the alert */
+.alertbtn {
+  
+  width: 10%;
+  background-color: #224f11;
+  color: white;
+  transition: 0.5;
+  cursor: pointer;
+  position: absolute;
+  bottom: 560px;
+  left: 750px;
+
+}
+

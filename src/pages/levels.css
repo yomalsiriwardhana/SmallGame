@@ -17,13 +17,12 @@
 
 .imgs {
     background-image: url("/src/images/image2.png");
-  height: 80%;
-  width: 77%;
-  margin-left: -280px;
-  margin-top: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  bottom: 20;
+    height: 90%; 
+    width: 77%; 
+    margin-left: -250px; 
+    margin-top: 110px; 
+    background-size: contain; 
+    background-repeat: no-repeat;
 }
 
 #levelForm {
@@ -75,11 +74,11 @@
 }
 
 #Easy-btn {
-    bottom: 185px;
+    bottom: 150px;
 }
 
 #Medium-btn {
-    bottom: 105px;
+    bottom: 50px;
 }
 
 #Easy-btn:hover {
