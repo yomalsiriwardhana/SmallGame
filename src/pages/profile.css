@@ -1,0 +1,73 @@
+.profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/src/images/bgimage2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .profileForm {
+    background-color: #d3d3d3;
+    max-width: 400px;
+    padding: 20px;
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .profileField {
+    margin: 10px 0;
+  }
+  
+  .profileField input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #224f11;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #058817;
+  }
+  
+  .deleteButton {
+    background-color: #ff4d4d;
+  }
+  
+  .deleteButton:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .success {
+    color: green;
+  }
+  

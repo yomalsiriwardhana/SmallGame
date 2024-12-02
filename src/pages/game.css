@@ -51,16 +51,7 @@
 }
 
 /* Mute button style */
-.mute-btn {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: transparent;
-  font-size: 2em;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
+
 
 /* Styling for the game note */
 #note {

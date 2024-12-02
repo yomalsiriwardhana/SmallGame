@@ -184,7 +184,7 @@ const TomatoGame = ({ user, username }) => {
                 </button>
               ))}
             </div>
-            <button className="mute-btn" onClick={handleMuteToggle}>
+            <button className="mutee-btnnn" onClick={handleMuteToggle}>
               {isMuted ? ' 🔇' : ' 🔊'}
             </button>
             

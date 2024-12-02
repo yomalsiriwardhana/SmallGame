@@ -115,7 +115,7 @@
 }
 
 .alert.error {
-  background-color: #f44336; /* Red for error */
+  background-color: #000000; /* Red for error */
 }
 
 .alert p {
