@@ -1,73 +1,172 @@
-.profile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('/src/images/bgimage2.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .profileForm {
-    background-color: #d3d3d3;
-    max-width: 400px;
-    padding: 20px;
-    width: 100%;
-    height: 60%;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .profileField {
-    margin: 10px 0;
-  }
-  
-  .profileField input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #224f11;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 400;
-    font-size: 18px;
-    width: 100%;
-    margin-top: 15px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #058817;
-  }
-  
-  .deleteButton {
-    background-color: #ff4d4d;
-  }
-  
-  .deleteButton:hover {
-    background-color: #ff1a1a;
-  }
-  
-  .error {
-    color: red;
-  }
-  
-  .success {
-    color: green;
-  }
-  
+/* Overall container for the profile page */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("C:/Users/DOWNLOAD/OneDrive/Desktop/Sgame/final/my-firebase-app/src/images/bgimage1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left and Right Sections */
+.profile-left,
+.profile-right {
+  background-color: #d3d3d3;
+  max-width: 400px;
+  padding: 20px;
+  width: 40%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Title for each section */
+.profile-left h2,
+.profile-right h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #232836;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Profile field container */
+.profileField {
+  margin: 15px 0;
+}
+
+.profileField label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.profileField p,
+.profileField input {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 98%;
+  margin-top: 10px;
+}
+
+/* Focused input field styles */
+.profileField input:focus {
+  outline: none;
+  border-color: #224f11;
+}
+
+/* Buttons styling */
+button {
+  height: 50px;
+  width: 40%;
+  background-color: #224f11;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #058817;
+}
+
+/* Delete button */
+.deleteButton {
+  background-color: #ff4d4d;
+}
+
+.deleteButton:hover {
+  background-color: #ff1a1a;
+}
+
+/* Link to login or other pages */
+.formLink {
+  font-size: 12px;
+  color: #232836;
+  text-align: center;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+}
+
+.formLink a {
+  color: #1100fe;
+  text-decoration: none;
+}
+
+.formLink a:hover {
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.profile p {
+  color: #232836;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Style for alert messages */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: auto;
+  max-width: 90%;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.alert.success {
+  background-color: #4CAF50; /* Green for success */
+}
+
+.alert.error {
+  background-color: #f44336; /* Red for error */
+}
+
+/* Ensure the text doesn't overlap with the button */
+.alert p {
+  margin: 0;
+  flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+/* Style for the OK button inside the alert */
+.alertbtn {
+  height: 30px;
+  width: auto;
+  padding: 5px 15px;
+  background-color: #224f11;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
