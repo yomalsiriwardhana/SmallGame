@@ -116,22 +116,26 @@ const TomatoGame = ({ user, username }) => {
     try {
       const db = getFirestore();
       const gameScoresCollection = collection(db, 'gameScores');
-      
+  
       const startTime = Timestamp.fromDate(new Date()); // Current time when the game started
       const endTime = Timestamp.fromDate(new Date()); // Current time when the game ended
-      
+  
+      // Add 5 points to the final score
+      const adjustedScore = finalScore + 5;
+  
       // Add document to Firestore collection
       await addDoc(gameScoresCollection, {
         username: username,
-        score: finalScore,
+        score: adjustedScore, // Save the adjusted score
         startTime: startTime,
         endTime: endTime,
       });
-      console.log("Game data saved to Firestore");
+      console.log("Game data saved to Firestore with adjusted score");
     } catch (error) {
       console.error("Error saving game data: ", error);
     }
   };
+  
 
   const handleGameOver = () => {
     saveScoreToDatabase(score);
